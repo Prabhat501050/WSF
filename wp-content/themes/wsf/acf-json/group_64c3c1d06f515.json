@@ -1,0 +1,180 @@
+{
+    "key": "group_64c3c1d06f515",
+    "title": "Clone : Background",
+    "fields": [
+        {
+            "key": "field_64c3cec86d637",
+            "label": "Background",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64c3c1d08f9a0",
+            "label": "Background Type",
+            "name": "background_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "choices": {
+                "color": "Color",
+                "image": "Image",
+                "both": "Color & Image"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64c3c2618f9a1",
+            "label": "Background Image",
+            "name": "background_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "2400 x 1350",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64c3c1d08f9a0",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_64c3c1d08f9a0",
+                        "operator": "==",
+                        "value": "both"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64c3c90d512e5",
+            "label": "Background Color",
+            "name": "background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64c3c1d08f9a0",
+                        "operator": "==",
+                        "value": "color"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_64c3c1d08f9a0",
+                        "operator": "==",
+                        "value": "both"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "choices": {
+                "white": "White",
+                "black": "Black",
+                "red": "Red",
+                "red-accent": "Red Accent",
+                "charcoal": "Charcoal",
+                "blue": "Light Blue",
+                "tan": "Tan",
+                "beige": "Beige",
+                "dark-beige": "Dark Beige"
+            },
+            "default_value": "beige",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/news"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/banner"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/quote"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/cta"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1701989697
+}

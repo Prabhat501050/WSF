@@ -1,0 +1,99 @@
+form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 0 25px;
+    border-bottom: 1px solid #000;
+}
+
+.col {
+    width: 35%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="%23000000" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" /></svg>');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center right 10px;
+    cursor: pointer;
+    outline: 0;
+    border: 2px solid #000;
+    border-radius: 10px;
+    height: 38px;
+    padding: 8px;
+    width: 250px;
+}
+.arrow {
+    width: 25px;
+}
+
+.show-cli {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    margin:50px auto;
+}
+
+.show-cli p {
+    /* border: 2px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+    padding: 4px 8px;
+    position: relative; */
+}
+.copied {
+    border: 2px solid red;
+}
+.cli-wrapper {
+    margin: 0 auto;
+    min-width: 70%;
+    overflow: visible;
+    position: relative;
+}
+.cli-wrapper:after {
+    content: 'copied!';
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    opacity: 0;
+    transition: opacity .5s linear, transform .5s linear;
+    text-transform: uppercase;
+    width: 100px;
+    height: 16px;
+}
+
+.cli-wrapper.cli-copied:after {
+    opacity: 1;
+}
+
+p span {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 12px;
+    transition: opacity .5s linear, width .5s linear, margin-right .5s linear;
+    width: 20px;
+}
+
+.copied span {
+    margin-right: 0;
+    opacity: 0;
+    width: 0;
+}
+
+textarea {
+    min-height: 200px;
+    min-width: calc(100% - 6px);
+    padding: 20px;
+}

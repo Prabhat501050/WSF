@@ -1,0 +1,280 @@
+{
+    "key": "group_64b1bf82107b5",
+    "title": "Block: Banner",
+    "fields": [
+        {
+            "key": "field_64b1bf824b52a",
+            "label": "Content",
+            "name": "content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_64b1c1904b52d",
+            "label": "Media Type",
+            "name": "media_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "image": "Image",
+                "video_embed": "Video (oEmbed)",
+                "video_file": "Video (file)"
+            },
+            "default_value": "none",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64b1c24a1cbf0",
+            "label": "Layout",
+            "name": "layout",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "short": "Short",
+                "half-content-media": "1\/2 content 1\/2 media",
+                "media-background": "Media background",
+                "card-media-background": "Content card (white bg) over media bg"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64b1c1154b52b",
+            "label": "Image",
+            "name": "image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Full Width: 2400 x 1350 <br \/>\r\nHalf Width: 1200 x 1350",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64b1c1904b52d",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64b1c1284b52c",
+            "label": "Video (oEmbed)",
+            "name": "video_embed",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64b1c1904b52d",
+                        "operator": "==",
+                        "value": "video_embed"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_64b1c1e34b52e",
+            "label": "Video (file)",
+            "name": "video_file",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64b1c1904b52d",
+                        "operator": "==",
+                        "value": "video_file"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4,webm"
+        },
+        {
+            "key": "field_64cbe1acade08",
+            "label": "Background Color",
+            "name": "background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64b1c1904b52d",
+                        "operator": "==",
+                        "value": "none"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_64b1c1904b52d",
+                        "operator": "==",
+                        "value": "image"
+                    },
+                    {
+                        "field": "field_64b1c24a1cbf0",
+                        "operator": "!=",
+                        "value": "media-background"
+                    },
+                    {
+                        "field": "field_64b1c24a1cbf0",
+                        "operator": "!=",
+                        "value": "card-media-background"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_64b1c1904b52d",
+                        "operator": "==",
+                        "value": "video_embed"
+                    },
+                    {
+                        "field": "field_64b1c24a1cbf0",
+                        "operator": "!=",
+                        "value": "media-background"
+                    },
+                    {
+                        "field": "field_64b1c24a1cbf0",
+                        "operator": "!=",
+                        "value": "card-media-background"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_64b1c1904b52d",
+                        "operator": "==",
+                        "value": "video_file"
+                    },
+                    {
+                        "field": "field_64b1c24a1cbf0",
+                        "operator": "!=",
+                        "value": "media-background"
+                    },
+                    {
+                        "field": "field_64b1c24a1cbf0",
+                        "operator": "!=",
+                        "value": "card-media-background"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "white": "White",
+                "black": "Black",
+                "red": "Red",
+                "red-accent": "Red Accent",
+                "charcoal": "Charcoal",
+                "blue": "Light Blue",
+                "tan": "Tan",
+                "beige": "Beige"
+            },
+            "default_value": "white",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1692385772
+}

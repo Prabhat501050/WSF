@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'Inter';
+	src: url('../assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('ttf') tech('variations'),
+	     url('../assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('ttf-variations');
+	font-weight: 100 1000;
+	font-stretch: 25% 151%;
+}
+
+@font-face {
+    font-family: 'Knockout 68';
+    src: url('../assets/fonts/Knockout-68_Web.woff2') format('woff2');
+    font-weight: 400;
+}
