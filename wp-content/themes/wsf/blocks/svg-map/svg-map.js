@@ -50,28 +50,41 @@ window.onload = function () {
 		var span = modal.getElementsByClassName('btn-close')[0];
 
 		btn.onclick = function () {
-			modal.style.animationName = "";
 			modal.style.display = "block";
 		}
 
-		span.onclick = closeModal;
-		window.onclick = function (event) {
+		span.onclick = function () {
+			closeModal(modal);
+		}
+
+		// Attach the event listener directly to the modal
+		modal.onclick = function (event) {
 			if (event.target == modal) {
-				closeModal();
+				closeModal(modal);
 			}
 		}
-
-		function closeModal() {
-			modal.style.animationName = "fadeOut";
-			setTimeout(function () {
-				modal.style.display = "none";
-				modal.style.animationName = "";
-			}, 500);
-		}
-
 	});
 
+	// Close modal if anywhere on the window is clicked, except the modal content
+	window.onclick = function (event) {
+		states.forEach(function (state) {
+			var modal = document.getElementById(state + 'modal');
+			if (event.target == modal) {
+				closeModal(modal);
+			}
+		});
+	};
+
+	function closeModal(modal) {
+		modal.style.animationName = "fadeOut";
+		setTimeout(function () {
+			modal.style.display = "none";
+			modal.style.animationName = "";
+		}, 500);
+	}
 };
+
+
 
 
 // Mobile Map slider 
