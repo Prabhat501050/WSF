@@ -14,17 +14,19 @@ if (is_array($blockFields)) {
 
 <div id="<?= $customBlock->id ?>" data-anchor="<?= $customBlock->id ?>" data-anchor-label="<?= $customBlock->anchorLabel ?>" class=" <?= $customBlock->classesString ?> bg-beige">
     <?= $is_preview ? '<span class="block-preview-label ">' . $customBlock->title . '</span>' : '' ?>
-    <div id="Desktopmap" class="container pt-[150px] animate-in animated  pb-[150px]">
+    <div id="Desktopmap" class="container pt-[150px]  pb-[150px]">
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 1535 789">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 1535 789" class="fadein">
             <g class="us_map">
 
                 <g class="Alabama" id="Alabama" data-bs-toggle="modal" data-bs-target="#Alabamamodal">
-                    <path fill="#98252C" fill-rule="evenodd" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" d="M933.139 208.87a2.675 2.675 0 0 0-.882 5.049l.675.337a4.936 4.936 0 0 1 2.729 4.416v177.24c0 .248.019.496.055.741l11.91 79.403a5 5 0 0 0 4.945 4.258h2.025c1.326 0 2.598.527 3.536 1.465l2.301 2.302a1.485 1.485 0 0 0 2.536-1.05v-10.706c0-.275.023-.55.068-.822l.802-4.815c.561-3.364 4.488-4.938 7.217-2.891a4.548 4.548 0 0 1 1.683 4.742l-.681 2.727a5 5 0 0 0 1.315 4.748l2.199 2.2 6.764 6.763a3.75 3.75 0 0 0 3.838.907l2.248-.75a1.695 1.695 0 0 0 .981-2.366 1.696 1.696 0 0 1 1.516-2.454h.466a1.98 1.98 0 0 0 1.587-.793l3.853-5.137a5 5 0 0 0 .472-5.236l-.191-.382a5.005 5.005 0 0 1-.528-2.236v-3.619a5.001 5.001 0 0 0-3.418-4.744l-1.764-.587a5.007 5.007 0 0 1-1.954-1.208l-3.575-3.576a5 5 0 0 1-1.367-4.516l.86-4.301a5 5 0 0 1 4.342-3.988l121.068-13.67c2.85-.322 4.69-3.192 3.78-5.917a4.563 4.563 0 0 0-1.09-1.765l-3.87-3.873a4.966 4.966 0 0 1-1.44-4.033l1.66-16.621c.13-1.301-.26-2.6-1.07-3.621l-6.04-7.542a4.99 4.99 0 0 1-1.09-3.123v-6.679c0-1.326.52-2.598 1.46-3.536l1.28-1.272a5.03 5.03 0 0 0 1.46-3.536v-6.616c0-1.163.46-2.278 1.28-3.101l1.77-1.768c1.49-1.493.89-4.035-1.11-4.703a2.839 2.839 0 0 1-1.94-2.695v-4.689c0-1.082-.35-2.134-1-3l-4.96-6.617a4.685 4.685 0 0 1-.57-.969l-8.17-18.39-36.56-113.721a4.993 4.993 0 0 0-5.34-3.436L933.139 208.87Z" class="svg-elem-1" clip-rule="evenodd"></path>
+                    <path fill="#98252C" fill-rule="evenodd" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" d="M933.139 208.87a2.675 2.675 0 0 0-.882 5.049l.675.337a4.936 4.936 0 0 1 2.729 4.416v177.24c0 .248.019.496.055.741l11.91 79.403a5 5 0 0 0 4.945 4.258h2.025c1.326 0 2.598.527 3.536 1.465l2.301 2.302a1.485 1.485 0 0 0 2.536-1.05v-10.706c0-.275.023-.55.068-.822l.802-4.815c.561-3.364 4.488-4.938 7.217-2.891a4.548 4.548 0 0 1 1.683 4.742l-.681 2.727a5 5 0 0 0 1.315 4.748l2.199 2.2 6.764 6.763a3.75 3.75 0 0 0 3.838.907l2.248-.75a1.695 1.695 0 0 0 .981-2.366 1.696 1.696 0 0 1 1.516-2.454h.466a1.98 1.98 0 0 0 1.587-.793l3.853-5.137a5 5 0 0 0 .472-5.236l-.191-.382a5.005 5.005 0 0 1-.528-2.236v-3.619a5.001 5.001 0 0 0-3.418-4.744l-1.764-.587a5.007 5.007 0 0 1-1.954-1.208l-3.575-3.576a5 5 0 0 1-1.367-4.516l.86-4.301a5 5 0 0 1 4.342-3.988l121.068-13.67c2.85-.322 4.69-3.192 3.78-5.917a4.563 4.563 0 0 0-1.09-1.765l-3.87-3.873a4.966 4.966 0 0 1-1.44-4.033l1.66-16.621c.13-1.301-.26-2.6-1.07-3.621l-6.04-7.542a4.99 4.99 0 0 1-1.09-3.123v-6.679c0-1.326.52-2.598 1.46-3.536l1.28-1.272a5.03 5.03 0 0 0 1.46-3.536v-6.616c0-1.163.46-2.278 1.28-3.101l1.77-1.768c1.49-1.493.89-4.035-1.11-4.703a2.839 2.839 0 0 1-1.94-2.695v-4.689c0-1.082-.35-2.134-1-3l-4.96-6.617a4.685 4.685 0 0 1-.57-.969l-8.17-18.39-36.56-113.721a4.993 4.993 0 0 0-5.34-3.436L933.139 208.87Z" class="svg-elem-1" clip-rule="evenodd">
+                    </path>
                     <path fill="#fff" d="M998.077 330.553h-12.513l-.873-10.379h-7.372l-1.067 10.379H965l9.409-64.602h14.356l9.312 64.602Zm-14.453-20.467-2.134-25.123-2.813 25.123h4.947Zm43.916 20.467h-25.51v-64.602h12.42v53.544h13.09v11.058Zm34.71 0h-12.51l-.87-10.379h-7.38l-1.06 10.379h-11.25l9.4-64.602h14.36l9.31 64.602Zm-14.45-20.467-2.13-25.123-2.82 25.123h4.95Zm-60.983 60.367c0 5.813-3.919 8.1-8.034 8.1h-11.889v-43.504h11.889c4.115 0 8.034 2.351 8.034 8.1v7.25c0 2.613-.98 5.095-3.984 6.01 2.874 1.11 3.984 3.266 3.984 6.009v8.035Zm-7.904-18.813v-7.577c0-1.437-.587-1.959-1.502-1.959h-2.09V353.6h2.09c.915 0 1.502-.588 1.502-1.96Zm0 17.964v-7.839c0-1.372-.587-1.959-1.502-1.959h-2.09v11.757h2.09c.915 0 1.502-.522 1.502-1.959Zm32.357 8.949h-8.42l-.59-6.99h-4.964l-.718 6.99H989l6.337-43.504H1005l6.27 43.504Zm-9.73-13.783-1.44-16.918-1.889 16.918h3.329Zm41.53 13.783h-8.03v-31.224l-1.37 10.321-3.01 20.903h-5.36l-2.74-20.903-1.24-10.321v31.224h-7.38v-43.504h11.04l2.68 17.049.98 8.818.98-8.818 2.61-17.049h10.84v43.504Zm24.82 0h-8.43l-.59-6.99h-4.96l-.72 6.99h-7.58l6.34-43.504h9.67l6.27 43.504Zm-9.74-13.783-1.43-16.918-1.9 16.918h3.33Z" class="svg-elem-2"></path>
                     <g class="Alb_map">
                         <path fill="#fff" d="M1035.54 171c-6.92 0-12.54 5.615-12.54 12.542 0 2.478.72 4.774 1.96 6.718.06.095.11.188.17.281l7.78 14.445c.36 1.05 1.4 1.847 2.58 1.847 1.17 0 2.15-.797 2.51-1.847l8.68-15.677c.9-1.726 1.4-3.691 1.4-5.767 0-6.927-5.61-12.542-12.54-12.542Zm-.05 7.111a6.272 6.272 0 0 1 0 12.541 6.274 6.274 0 0 1-6.28-6.27 6.274 6.274 0 0 1 6.28-6.271ZM1063.54 316c-6.92 0-12.54 5.615-12.54 12.542 0 2.478.72 4.774 1.96 6.718.06.095.11.188.17.281l7.78 14.445c.36 1.05 1.4 1.847 2.58 1.847 1.17 0 2.15-.797 2.51-1.847l8.68-15.677c.9-1.726 1.4-3.691 1.4-5.767 0-6.927-5.61-12.542-12.54-12.542Zm-.05 7.111a6.272 6.272 0 0 1 0 12.541 6.274 6.274 0 0 1-6.28-6.27 6.274 6.274 0 0 1 6.28-6.271ZM1055.54 371c-6.92 0-12.54 5.615-12.54 12.542 0 2.478.72 4.774 1.96 6.718.06.095.11.188.17.281l7.78 14.445c.36 1.05 1.4 1.847 2.58 1.847 1.17 0 2.15-.797 2.51-1.847l8.68-15.677c.9-1.726 1.4-3.691 1.4-5.767 0-6.927-5.61-12.542-12.54-12.542Zm-.05 7.111a6.272 6.272 0 0 1 0 12.541 6.274 6.274 0 0 1-6.28-6.27 6.274 6.274 0 0 1 6.28-6.271Zm27.05-2.111c-6.92 0-12.54 5.615-12.54 12.542 0 2.478.72 4.774 1.96 6.718.06.095.11.188.17.281l7.78 14.445c.36 1.05 1.4 1.847 2.58 1.847 1.17 0 2.15-.797 2.51-1.847l8.68-15.677c.9-1.726 1.4-3.691 1.4-5.767 0-6.927-5.61-12.542-12.54-12.542Zm-.05 7.111a6.272 6.272 0 0 1 0 12.541 6.274 6.274 0 0 1-6.28-6.27 6.274 6.274 0 0 1 6.28-6.271Z" class="Vector" />
                     </g>
+
                 </g>
                 <g class="Arkansas" id="Arkansas" data-bs-toggle="modal" data-bs-target="#Arkansasmodal">
                     <path fill="#98252C" fill-rule="evenodd" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" d="M616.791 315.293a5.003 5.003 0 0 1-2.76-4.273l-4.083-102.085-10.473-60.748a2.063 2.063 0 0 1 1.89-2.408l207.969-14.415c1.443-.1 2.859.43 3.881 1.453l3.228 3.228a4.996 4.996 0 0 1 1.464 3.535v.529a4.997 4.997 0 0 1-.931 2.906l-9.331 13.064c-.16.224-.339.435-.533.63l-1.023 1.023a2.68 2.68 0 0 0 2.275 4.549l24.802-3.543a4.997 4.997 0 0 1 2.943.477l2.637 1.319c.111.055.212.128.3.216.726.726.211 1.968-.816 1.968h-1.672c-1.02 0-1.846.827-1.846 1.846v1.63c0 .465.185.91.513 1.239a1.752 1.752 0 0 1-.337 2.742l-5.402 3.242a5 5 0 0 0-2.278 5.5l1.091 4.362c.074.297.111.601.111.907v1.382a2.359 2.359 0 0 1-2.359 2.359 2.36 2.36 0 0 0-2.289 1.787l-1.653 6.616-1.496 4.486a4.627 4.627 0 0 0 .251 3.529l1.306 2.612c.937 1.874-.426 4.078-2.521 4.078a2.82 2.82 0 0 0-2.521 1.558l-2.894 5.79a4.998 4.998 0 0 0-.528 2.236v2.446a5 5 0 0 1-2.226 4.16l-2.248 1.498a4.106 4.106 0 0 0-1.828 3.416v.954a3.15 3.15 0 0 1-3.151 3.151 3.15 3.15 0 0 0-3.15 3.151v13.08a5 5 0 0 1-2.227 4.16l-2.105 1.404a4.423 4.423 0 0 0-1.97 3.682 4.424 4.424 0 0 1-1.296 3.129l-5.006 5.006a2.972 2.972 0 0 0 0 4.202l.293.293a2.557 2.557 0 0 1-.664 4.094l-4.616 2.308a5 5 0 0 0-2.667 5.452l.914 4.567a5.003 5.003 0 0 1-.903 3.981l-3.305 4.407a3.182 3.182 0 0 0 .296 4.159l.149.149a2.972 2.972 0 0 1 0 4.202 2.97 2.97 0 0 0 0 4.201l.87.87a4.202 4.202 0 0 1 1.231 2.971v7.25c0 .987.292 1.952.839 2.773l1.172 1.758a4.816 4.816 0 0 1-.601 6.076l-.05.05a4.643 4.643 0 0 0-1.36 3.284 4.645 4.645 0 0 1-4.372 4.636l-133.175 7.834a5 5 0 0 1-5.294-4.991v-24.723a3.588 3.588 0 0 0-3.586-3.586h-7.933c-.695 0-1.36.275-1.851.766a2.618 2.618 0 0 1-3.022.49l-2.513-1.256-1.56-.78Z" class="svg-elem-3" clip-rule="evenodd"></path>
@@ -86,7 +88,7 @@ if (is_array($blockFields)) {
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzAgMTUuNUMzMCAyMy41MDggMjMuNTA4IDMwIDE1LjUgMzBTMSAyMy41MDggMSAxNS41IDcuNDkyIDEgMTUuNSAxIDMwIDcuNDkyIDMwIDE1LjVaIi8+CiAgPHBhdGggZmlsbD0iIzk4MjUyQyIgZD0iTTE1LjU5IDBDNi45OCAwIDAgNi45OCAwIDE1LjU5czYuOTggMTUuNTkgMTUuNTkgMTUuNTkgMTUuNTktNi45OCAxNS41OS0xNS41OVMyNC4yIDAgMTUuNTkgMFptNy43MSAyMC41NDUtMi43NTUgMi43NTYtNC45NTUtNC45NTYtNC45NTYgNC45NTYtMi43NTUtMi43NTYgNC45NTUtNC45NTUtNC45NTUtNC45NTYgMi43NTUtMi43NTUgNC45NTYgNC45NTUgNC45NTUtNC45NTUgMi43NTYgMi43NTUtNC45NTYgNC45NTYgNC45NTYgNC45NTVaIi8+Cjwvc3ZnPg==" alt="close" /></button>
                     </div>
 
                     <div class="modal-body">
@@ -114,7 +116,7 @@ if (is_array($blockFields)) {
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzAgMTUuNUMzMCAyMy41MDggMjMuNTA4IDMwIDE1LjUgMzBTMSAyMy41MDggMSAxNS41IDcuNDkyIDEgMTUuNSAxIDMwIDcuNDkyIDMwIDE1LjVaIi8+CiAgPHBhdGggZmlsbD0iIzk4MjUyQyIgZD0iTTE1LjU5IDBDNi45OCAwIDAgNi45OCAwIDE1LjU5czYuOTggMTUuNTkgMTUuNTkgMTUuNTkgMTUuNTktNi45OCAxNS41OS0xNS41OVMyNC4yIDAgMTUuNTkgMFptNy43MSAyMC41NDUtMi43NTUgMi43NTYtNC45NTUtNC45NTYtNC45NTYgNC45NTYtMi43NTUtMi43NTYgNC45NTUtNC45NTUtNC45NTUtNC45NTYgMi43NTUtMi43NTUgNC45NTYgNC45NTUgNC45NTUtNC45NTUgMi43NTYgMi43NTUtNC45NTYgNC45NTYgNC45NTYgNC45NTVaIi8+Cjwvc3ZnPg==" alt="close" /></button>
                     </div>
 
                     <div class="modal-body">
@@ -143,7 +145,7 @@ if (is_array($blockFields)) {
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzAgMTUuNUMzMCAyMy41MDggMjMuNTA4IDMwIDE1LjUgMzBTMSAyMy41MDggMSAxNS41IDcuNDkyIDEgMTUuNSAxIDMwIDcuNDkyIDMwIDE1LjVaIi8+CiAgPHBhdGggZmlsbD0iIzk4MjUyQyIgZD0iTTE1LjU5IDBDNi45OCAwIDAgNi45OCAwIDE1LjU5czYuOTggMTUuNTkgMTUuNTkgMTUuNTkgMTUuNTktNi45OCAxNS41OS0xNS41OVMyNC4yIDAgMTUuNTkgMFptNy43MSAyMC41NDUtMi43NTUgMi43NTYtNC45NTUtNC45NTYtNC45NTYgNC45NTYtMi43NTUtMi43NTYgNC45NTUtNC45NTUtNC45NTUtNC45NTYgMi43NTUtMi43NTUgNC45NTYgNC45NTUgNC45NTUtNC45NTUgMi43NTYgMi43NTUtNC45NTYgNC45NTYgNC45NTYgNC45NTVaIi8+Cjwvc3ZnPg==" alt="close" /></button>
                     </div>
 
                     <div class="modal-body">
@@ -172,7 +174,7 @@ if (is_array($blockFields)) {
                 <div class="modal-content">
                     <div class="modal-header">
                         <!-- <h5 class="modal-title" id="ArkansasLabel">Arkansas</h5> -->
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzAgMTUuNUMzMCAyMy41MDggMjMuNTA4IDMwIDE1LjUgMzBTMSAyMy41MDggMSAxNS41IDcuNDkyIDEgMTUuNSAxIDMwIDcuNDkyIDMwIDE1LjVaIi8+CiAgPHBhdGggZmlsbD0iIzk4MjUyQyIgZD0iTTE1LjU5IDBDNi45OCAwIDAgNi45OCAwIDE1LjU5czYuOTggMTUuNTkgMTUuNTkgMTUuNTkgMTUuNTktNi45OCAxNS41OS0xNS41OVMyNC4yIDAgMTUuNTkgMFptNy43MSAyMC41NDUtMi43NTUgMi43NTYtNC45NTUtNC45NTYtNC45NTYgNC45NTYtMi43NTUtMi43NTYgNC45NTUtNC45NTUtNC45NTUtNC45NTYgMi43NTUtMi43NTUgNC45NTYgNC45NTUgNC45NTUtNC45NTUgMi43NTYgMi43NTUtNC45NTYgNC45NTYgNC45NTYgNC45NTVaIi8+Cjwvc3ZnPg==" alt="close" /></button>
                     </div>
 
                     <div class="modal-body">
@@ -200,7 +202,7 @@ if (is_array($blockFields)) {
                 <div class="modal-content">
                     <div class="modal-header">
                         <!-- <h5 class="modal-title" id="ArkansasLabel">Arkansas</h5> -->
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzAgMTUuNUMzMCAyMy41MDggMjMuNTA4IDMwIDE1LjUgMzBTMSAyMy41MDggMSAxNS41IDcuNDkyIDEgMTUuNSAxIDMwIDcuNDkyIDMwIDE1LjVaIi8+CiAgPHBhdGggZmlsbD0iIzk4MjUyQyIgZD0iTTE1LjU5IDBDNi45OCAwIDAgNi45OCAwIDE1LjU5czYuOTggMTUuNTkgMTUuNTkgMTUuNTkgMTUuNTktNi45OCAxNS41OS0xNS41OVMyNC4yIDAgMTUuNTkgMFptNy43MSAyMC41NDUtMi43NTUgMi43NTYtNC45NTUtNC45NTYtNC45NTYgNC45NTYtMi43NTUtMi43NTYgNC45NTUtNC45NTUtNC45NTUtNC45NTYgMi43NTUtMi43NTUgNC45NTYgNC45NTUgNC45NTUtNC45NTUgMi43NTYgMi43NTUtNC45NTYgNC45NTYgNC45NTYgNC45NTVaIi8+Cjwvc3ZnPg==" alt="close" /></button>
                     </div>
 
                     <div class="modal-body">
@@ -228,7 +230,7 @@ if (is_array($blockFields)) {
                 <div class="modal-content">
                     <div class="modal-header">
                         <!-- <h5 class="modal-title" id="ArkansasLabel">Arkansas</h5> -->
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzAgMTUuNUMzMCAyMy41MDggMjMuNTA4IDMwIDE1LjUgMzBTMSAyMy41MDggMSAxNS41IDcuNDkyIDEgMTUuNSAxIDMwIDcuNDkyIDMwIDE1LjVaIi8+CiAgPHBhdGggZmlsbD0iIzk4MjUyQyIgZD0iTTE1LjU5IDBDNi45OCAwIDAgNi45OCAwIDE1LjU5czYuOTggMTUuNTkgMTUuNTkgMTUuNTkgMTUuNTktNi45OCAxNS41OS0xNS41OVMyNC4yIDAgMTUuNTkgMFptNy43MSAyMC41NDUtMi43NTUgMi43NTYtNC45NTUtNC45NTYtNC45NTYgNC45NTYtMi43NTUtMi43NTYgNC45NTUtNC45NTUtNC45NTUtNC45NTYgMi43NTUtMi43NTUgNC45NTYgNC45NTUgNC45NTUtNC45NTUgMi43NTYgMi43NTUtNC45NTYgNC45NTYgNC45NTYgNC45NTVaIi8+Cjwvc3ZnPg==" alt="close" /></button>
                     </div>
 
                     <div class="modal-body">
@@ -256,7 +258,7 @@ if (is_array($blockFields)) {
                 <div class="modal-content">
                     <div class="modal-header">
                         <!-- <h5 class="modal-title" id="ArkansasLabel">Arkansas</h5> -->
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzAgMTUuNUMzMCAyMy41MDggMjMuNTA4IDMwIDE1LjUgMzBTMSAyMy41MDggMSAxNS41IDcuNDkyIDEgMTUuNSAxIDMwIDcuNDkyIDMwIDE1LjVaIi8+CiAgPHBhdGggZmlsbD0iIzk4MjUyQyIgZD0iTTE1LjU5IDBDNi45OCAwIDAgNi45OCAwIDE1LjU5czYuOTggMTUuNTkgMTUuNTkgMTUuNTkgMTUuNTktNi45OCAxNS41OS0xNS41OVMyNC4yIDAgMTUuNTkgMFptNy43MSAyMC41NDUtMi43NTUgMi43NTYtNC45NTUtNC45NTYtNC45NTYgNC45NTYtMi43NTUtMi43NTYgNC45NTUtNC45NTUtNC45NTUtNC45NTYgMi43NTUtMi43NTUgNC45NTYgNC45NTUgNC45NTUtNC45NTUgMi43NTYgMi43NTUtNC45NTYgNC45NTYgNC45NTYgNC45NTVaIi8+Cjwvc3ZnPg==" alt="close" /></button>
                     </div>
 
                     <div class="modal-body">
@@ -284,7 +286,7 @@ if (is_array($blockFields)) {
     </div>
 
     <div class="container">
-        <div class=" slider" id="Mobilemap">
+        <div class=" slider fadein" id="Mobilemap">
             <div class="slides">
                 <!-- Add your images here with class 'slide' -->
                 <div class="slide"><a href="#Alabamacontent"><img src="<?= get_template_directory_uri() ?>/assets/images/svg-map-images/ALABAMA.svg" /></a>
@@ -724,7 +726,7 @@ if (is_array($blockFields)) {
     }
 
     .modal {
-        animation-name: fadeIn;
+        animation-name: animate-in;
         animation-duration: 0.5s;
     }
 
@@ -733,6 +735,7 @@ if (is_array($blockFields)) {
         position: fixed !important;
         right: 40px !important;
         width: 100% !important;
+        animation: animate-in;
     }
 
     #North_Carolinamodal .modal-header {
@@ -794,14 +797,10 @@ if (is_array($blockFields)) {
     }
 
     .modal .btn-close {
-        font-size: 20px;
         position: relative;
-        color: #fff !important;
         padding: 10px;
-        /* background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e) center / 1em auto no-repeat !important; */
-        filter: drop-shadow(1px 0px 1px black);
-        top: 40px;
-        right: 20px;
+        top: 10px;
+        right: -17px;
         opacity: 1;
     }
 
@@ -1011,147 +1010,8 @@ if (is_array($blockFields)) {
         }
     }
 
-    .modal-fullscreen {
-        width: 100vw;
-        max-width: none;
-        height: 100%;
-        margin: 0
-    }
 
-    .modal-fullscreen .modal-content {
-        height: 100%;
-        border: 0;
-        border-radius: 0
-    }
 
-    .modal-fullscreen .modal-footer,
-    .modal-fullscreen .modal-header {
-        border-radius: 0
-    }
-
-    .modal-fullscreen .modal-body {
-        overflow-y: auto
-    }
-
-    @media (max-width:575.98px) {
-        .modal-fullscreen-sm-down {
-            width: 100vw;
-            max-width: none;
-            height: 100%;
-            margin: 0
-        }
-
-        .modal-fullscreen-sm-down .modal-content {
-            height: 100%;
-            border: 0;
-            border-radius: 0
-        }
-
-        .modal-fullscreen-sm-down .modal-footer,
-        .modal-fullscreen-sm-down .modal-header {
-            border-radius: 0
-        }
-
-        .modal-fullscreen-sm-down .modal-body {
-            overflow-y: auto
-        }
-    }
-
-    @media (max-width:767.98px) {
-        .modal-fullscreen-md-down {
-            width: 100vw;
-            max-width: none;
-            height: 100%;
-            margin: 0
-        }
-
-        .modal-fullscreen-md-down .modal-content {
-            height: 100%;
-            border: 0;
-            border-radius: 0
-        }
-
-        .modal-fullscreen-md-down .modal-footer,
-        .modal-fullscreen-md-down .modal-header {
-            border-radius: 0
-        }
-
-        .modal-fullscreen-md-down .modal-body {
-            overflow-y: auto
-        }
-    }
-
-    @media (max-width:991.98px) {
-        .modal-fullscreen-lg-down {
-            width: 100vw;
-            max-width: none;
-            height: 100%;
-            margin: 0
-        }
-
-        .modal-fullscreen-lg-down .modal-content {
-            height: 100%;
-            border: 0;
-            border-radius: 0
-        }
-
-        .modal-fullscreen-lg-down .modal-footer,
-        .modal-fullscreen-lg-down .modal-header {
-            border-radius: 0
-        }
-
-        .modal-fullscreen-lg-down .modal-body {
-            overflow-y: auto
-        }
-    }
-
-    @media (max-width:1199.98px) {
-        .modal-fullscreen-xl-down {
-            width: 100vw;
-            max-width: none;
-            height: 100%;
-            margin: 0
-        }
-
-        .modal-fullscreen-xl-down .modal-content {
-            height: 100%;
-            border: 0;
-            border-radius: 0
-        }
-
-        .modal-fullscreen-xl-down .modal-footer,
-        .modal-fullscreen-xl-down .modal-header {
-            border-radius: 0
-        }
-
-        .modal-fullscreen-xl-down .modal-body {
-            overflow-y: auto
-        }
-    }
-
-    @media (max-width:1399.98px) {
-        .modal-fullscreen-xxl-down {
-            width: 100vw;
-            max-width: none;
-            height: 100%;
-            margin: 0
-        }
-
-        .modal-fullscreen-xxl-down .modal-content {
-            height: 100%;
-            border: 0;
-            border-radius: 0
-        }
-
-        .modal-fullscreen-xxl-down .modal-footer,
-        .modal-fullscreen-xxl-down .modal-header {
-            border-radius: 0
-        }
-
-        .modal-fullscreen-xxl-down .modal-body {
-            overflow-y: auto
-        }
-    }
 
     /* MobileMap version */
 
@@ -1208,5 +1068,16 @@ if (is_array($blockFields)) {
 
     .next {
         right: 10px;
+    }
+
+    .fadein {
+        opacity: 0;
+        transition: all 1.5s;
+        transform: translate(0, 100px);
+    }
+
+    .fadein.visible {
+        opacity: 1;
+        transform: translate(0, 0);
     }
 </style>
