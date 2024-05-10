@@ -142,54 +142,15 @@ if (is_array($blockFields)) {
 
 </div>
 <style>
-    /* .careermap-area>.search-form {
-    height: 60px;
-    border: 1px solid #282828;
-    width: 80%;
-    display: flex;
-    align-items: center;
-
-}
-
-.careermap-area>.search-form label[for=search] input {
-    width: 100%;
-    border: 0;
-}
-
-.careermap-area [type='search'] {
-    background: transparent;
-    width: 100%;
-}
-
-.careermap-area label.search-label {
-    width: 100%;
-}
-
-.careermap-area .search-form label[for=search] input:focus-visible {
-    outline: none;
-}
-
-.careermap-area input[type=submit] {
-    flex: 0 0 auto;
-    border-radius: 50%;
-    padding: 0;
-    background-image: url(/wp-content/themes/wsf/assets/icons/search-white.svg);
-    background-color: #b11f28;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-indent: -209px;
-    margin-left: 5px;
-    margin-right: -30px;
-}
+    .careermap-area>.search-form {
+        width: 80%;
+        position: relative;
+        left: 10%;
+    }
 
 
-.careermap-area .search-form input,
-select,
-textarea {
-    border: 0;
-    outline: none;
-} */
+
+
 
     .fadein {
         opacity: 0;
@@ -239,7 +200,6 @@ textarea {
         outline: 0;
         box-shadow: none;
     }
-
 
     .accordion-item {
         transition: all ease 0.6s;

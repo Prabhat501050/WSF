@@ -24,7 +24,7 @@ export const SvgMap = (() => {
 			});
 
 			$('body').click(function () {
-				$(`.${svg}`).delay(500).show();
+				$(`.${svg}`).delay(100).show();
 				$(`.${pin}`).delay(1000).hide(0);
 			});
 		});
@@ -48,6 +48,9 @@ export const SvgMap = (() => {
 			}
 		}
 	})
+
+
+
 
 	return {
 		init: init,
@@ -100,6 +103,161 @@ window.onload = function () {
 	}
 };
 
+// Pulse Animation
+// document.addEventListener('DOMContentLoaded', function () {
+// 	// Function to apply the pulse animation to a circle
+// 	function applyPulseAnimation(circle, delay) {
+// 		const cx = circle.getAttribute('cx');
+// 		const cy = circle.getAttribute('cy');
+
+// 		circle.style.fill = '#F8F4EA'; // Set the fill color
+// 		circle.style.transformOrigin = `${cx}px ${cy}px`; // Set the transform origin based on cx and cy
+// 		circle.style.animation = `pulse-me 3s linear infinite ${delay}s`; // Apply the animation with delay
+// 	}
+
+// 	// Create a new style element
+// 	const styleEl = document.createElement('style');
+// 	document.head.appendChild(styleEl); // Append the style element to the head of the document
+
+// 	// Define the keyframes for the pulse animation
+// 	const styleSheet = styleEl.sheet;
+// 	styleSheet.insertRule(`
+//         @keyframes pulse-me {
+//             0% {
+//                 transform: scale(0.5);
+//                 opacity: 0;
+//             }
+//             50% {
+//                 opacity: 0.5;
+//             }
+//             70% {
+//                 opacity: 0.07;
+//             }
+//             100% {
+//                 transform: scale(2.5);
+//                 opacity: 0;
+//             }
+//         }`, styleSheet.cssRules.length);
+
+// 	// Select the SVG container and all the circles within the SVG
+// 	const svgContainer = document.querySelector('.pulse-svg'); // Replace with your actual class
+// 	const circles = svgContainer.querySelectorAll('.Ellipse'); // Replace with your actual class
+
+// 	// Apply the pulse animation to each circle with a different delay
+// 	circles.forEach((circle, index) => {
+// 		const delay = index * 0.5; // Adjust the delay as needed
+// 		applyPulseAnimation(circle, delay);
+// 	});
+// });
+
+// document.addEventListener('DOMContentLoaded', function () {
+// 	// Function to apply the pulse animation to a circle
+// 	function applyPulseAnimation(circle, delay) {
+// 		const cx = circle.getAttribute('cx');
+// 		const cy = circle.getAttribute('cy');
+
+// 		circle.style.fill = '#F8F4EA'; // Set the fill color
+// 		circle.style.transformOrigin = `${cx}px ${cy}px`; // Set the transform origin
+// 		circle.style.animation = `pulse-me 3s linear infinite ${delay}s`; // Apply the animation
+// 	}
+
+// 	// Define the keyframes for the pulse animation in a style element
+// 	const styleEl = document.createElement('style');
+// 	document.head.appendChild(styleEl);
+// 	const styleSheet = styleEl.sheet;
+// 	styleSheet.insertRule(`
+//         @keyframes pulse-me {
+//             0% { transform: scale(0.5); opacity: 0; }
+//             50% { opacity: 0.5; }
+//             70% { opacity: 0.07; }
+//             100% { transform: scale(5); opacity: 0; }
+//         }`, styleSheet.cssRules.length);
+
+// 	// MutationObserver to watch for when the circles are added to the DOM
+// 	const observer = new MutationObserver(function (mutations) {
+// 		mutations.forEach(function (mutation) {
+// 			if (mutation.type === 'childList') {
+// 				const circles = document.querySelectorAll('.Ellipse');
+// 				circles.forEach((circle, index) => {
+// 					const delay = index * 0.5; // Adjust the delay as needed
+// 					applyPulseAnimation(circle, delay);
+// 				});
+// 			}
+// 		});
+// 	});
+
+// 	// Options for the observer (which mutations to observe)
+// 	const config = { attributes: false, childList: true, subtree: true };
+
+// 	// Start observing the target node for configured mutations
+// 	const targetNode = document.querySelector('.pulse-svg');
+// 	if (targetNode) {
+// 		observer.observe(targetNode, config);
+// 	}
+// });
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+// 	// Function to apply the pulse animation to a circle
+// 	function applyPulseAnimation(circle, delay) {
+// 		const cx = circle.getAttribute('cx');
+// 		const cy = circle.getAttribute('cy');
+
+// 		// Set the transform origin and apply the animation with delay
+// 		circle.style.transformOrigin = `${cx}px ${cy}px`;
+// 		circle.style.animation = `pulse-me 3s linear infinite ${delay}s`;
+// 	}
+
+// 	// Insert the keyframes for the pulse animation
+// 	const styleEl = document.createElement('style');
+// 	document.head.appendChild(styleEl);
+// 	const styleSheet = styleEl.sheet;
+// 	styleSheet.insertRule(`
+//         @keyframes pulse-me {
+//             0% { transform: scale(0.5); opacity: 0; }
+//             50% { opacity: 0.5; }
+//             70% { opacity: 0.07; }
+//             100% { transform: scale(2.5); opacity: 0; }
+//         }`, styleSheet.cssRules.length);
+
+// 	// Apply the pulse animation to each circle with a delay
+// 	const circles = document.querySelectorAll('.Ellipse');
+// 	circles.forEach((circle, index) => {
+// 		applyPulseAnimation(circle, index * 0.5);
+// 	});
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+	// Function to apply the pulse animation to a circle
+	function applyPulseAnimation(circle) {
+		const cx = circle.getAttribute('cx');
+		const cy = circle.getAttribute('cy');
+
+		// Set the transform origin and apply the animation without delay
+		circle.style.transformOrigin = `${cx}px ${cy}px`;
+		circle.style.animation = `pulse-me 3s linear infinite`;
+	}
+
+	// Insert the keyframes for the pulse animation
+	const styleEl = document.createElement('style');
+	document.head.appendChild(styleEl);
+	const styleSheet = styleEl.sheet;
+	styleSheet.insertRule(`
+        @keyframes pulse-me {
+            0% { transform: scale(0.5); opacity: 1; }
+            50% { opacity: 0.5; }
+            70% { opacity: 0.07; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }`, styleSheet.cssRules.length);
+
+	// Apply the pulse animation to each circle
+	const circles = document.querySelectorAll('.Ellipse');
+	circles.forEach((circle) => {
+		applyPulseAnimation(circle);
+	});
+});
+
+
 
 
 
@@ -146,7 +304,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 	// Adjust visibility on resize
 	window.onresize = adjustMapVisibility;
+
+
+
 });
+
+
+
 
 
 
