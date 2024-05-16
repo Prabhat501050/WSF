@@ -61,10 +61,10 @@ export const Events = (() => {
 		const stateSelect = document.querySelector('.filter-select[data-slug="state"]');
 		const eventTypeSelect = document.querySelector('.filter-select[data-slug="event-type"]');
 		const schoolTypeSelect = document.querySelector('.filter-select[data-slug="school-type"]');
-		if ( filters.month ) {
+		if (filters.month) {
 			// Check if the value exists in the select
 			const monthOption = monthSelect.querySelector(`option[value="${filters.month}"]`);
-			if ( monthOption ) {
+			if (monthOption) {
 				// If the value exists in the select, set it to that value
 				monthSelect.value = filters.month;
 			} else {
@@ -72,10 +72,10 @@ export const Events = (() => {
 				monthSelect.value = 'all';
 			}
 		}
-		if ( filters.state ) {
+		if (filters.state) {
 			// Check if the value exists in the select
 			const stateOption = stateSelect.querySelector(`option[value="${filters.state}"]`);
-			if ( stateOption ) {
+			if (stateOption) {
 				// If the value exists in the select, set it to that value
 				stateSelect.value = filters.state;
 			} else {
@@ -83,10 +83,10 @@ export const Events = (() => {
 				stateSelect.value = 'all';
 			}
 		}
-		if ( filters.eventType ) {
+		if (filters.eventType) {
 			// Check if the value exists in the select
 			const eventTypeOption = eventTypeSelect.querySelector(`option[value="${filters.eventType}"]`);
-			if ( eventTypeOption ) {
+			if (eventTypeOption) {
 				// If the value exists in the select, set it to that value
 				eventTypeSelect.value = filters.eventType;
 			} else {
@@ -94,10 +94,10 @@ export const Events = (() => {
 				eventTypeSelect.value = 'all';
 			}
 		}
-		if ( filters.schoolType ) {
+		if (filters.schoolType) {
 			// Check if the value exists in the select
 			const schoolTypeOption = schoolTypeSelect.querySelector(`option[value="${filters.schoolType}"]`);
-			if ( schoolTypeOption ) {
+			if (schoolTypeOption) {
 				// If the value exists in the select, set it to that value
 				schoolTypeSelect.value = filters.schoolType;
 			} else {
@@ -118,7 +118,7 @@ export const Events = (() => {
 		}
 
 		// Take the update we are doing and store it to generate the new URL query string
-		switch ( name ) {
+		switch (name) {
 			case 'month':
 				filters.month = value;
 				break;
@@ -142,7 +142,7 @@ export const Events = (() => {
 
 	function generateUrl() {
 		// TODO - This currently removes other query string parameters, we should preserve them
-		
+
 		// Get the current base URL
 		let url = window.location.pathname;
 		// Remove any page number from the URL

@@ -15,7 +15,7 @@ if (is_array($blockFields)) {
 <div id="<?= $customBlock->id ?>" data-anchor="<?= $customBlock->id ?>"
     data-anchor-label="<?= $customBlock->anchorLabel ?>" class=" <?= $customBlock->classesString ?> bg-beige">
     <?= $is_preview ? '<span class="block-preview-label ">' . $customBlock->title . '</span>' : '' ?>
-    <div id="Desktopmap" class="container pt-[150px]  pb-[150px] relative">
+    <div id="Desktopmap" class="container mx-auto max-2xl pt-[150px]  pb-[150px] relative">
 
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 1535 789"
             class="fadein">
@@ -154,7 +154,7 @@ if (is_array($blockFields)) {
                             <circle cx="1388.16" cy="117.542" r="10.8" fill="#F8F4EA" />
                         </g>
                         <g class="Pulsat">
-                            <circle cx="1449.16" cy="78.542" r="10.8" fill="#F8F4EA" class="Ellips" />
+                            <circle cx="1449.16" cy="78.542" r="10.8" fill="#F8F4EA" class="Ellipse" />
                             <circle cx="1449.16" cy="78.542" r="10.8" fill="#F8F4EA" />
                         </g>
                     </g>
@@ -170,8 +170,8 @@ if (is_array($blockFields)) {
                         class="svg-elem-13 tx_svg_elem_13"></path>
                     <g class="Tx_l">
                         <g class="Pulsat">
-                            <circle cx="579.157" cy="397.537" r="12.24" fill="#F8F4EA" class="Ellipse" />
-                            <circle cx="579.157" cy="397.537" r="12.24" fill="#F8F4EA" />
+                            <circle cx="579.157" cy="397.537" r="12.24" fill="#F8F4EA" title="hello" class="Ellipse" />
+                            <circle cx="579.157" cy="397.537" r="12.24" fill="#F8F4EA" title="hello" />
 
                         </g>
                         <g class="Pulsat">
@@ -544,20 +544,151 @@ if (is_array($blockFields)) {
 
 
 <style>
-.Alabama:hover,
-.Texas:hover,
-.Georgia:hover,
-.Louisiana:hover,
-.Mississippi:hover,
-.Arkansas:hover,
-.NorthCarolina:hover {
-    fill: #ab8241 !important;
-    cursor: pointer;
-    transform: translate(-6px, 0px) scale(1.02);
-    transition: all 0.2s;
-    /* filter: drop-shadow(-4px -3px 6px #676767b8); */
-    z-index: 9;
+.Alabama {
+    transform-origin: 68% 40%;
+    transition: ease-in-out 0.3s;
 
+    &:hover {
+        fill: #ab8241 !important;
+        cursor: pointer;
+        transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transition: ease-in 0.3s;
+        z-index: 9;
+        transform-origin: 68% 40%;
+    }
+}
+
+.Arkansas {
+    transform-origin: 50% 40%;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+        fill: #ab8241 !important;
+        cursor: pointer;
+        transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transition: ease-in 0.3s;
+        z-index: 9;
+        transform-origin: 50% 40%;
+    }
+}
+
+
+
+.Georgia {
+    transform-origin: 80% 50%;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+        fill: #ab8241 !important;
+        cursor: pointer;
+        transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transition: ease-in 0.3s;
+        z-index: 9;
+        transform-origin: 80% 50%;
+    }
+}
+
+.Louisiana {
+    transform-origin: 45% 50%;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+        fill: #ab8241 !important;
+        cursor: pointer;
+        transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transition: ease-in 0.3s;
+        z-index: 9;
+        transform-origin: 45% 50%;
+    }
+}
+
+.Mississippi {
+    transform-origin: 55% 50%;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+        fill: #ab8241 !important;
+        cursor: pointer;
+        transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transition: ease-in 0.3s;
+        z-index: 9;
+        transform-origin: 55% 50%;
+    }
+}
+
+.NorthCarolina {
+    transform-origin: 80% 20%;
+    transition: ease-in 0.3s;
+
+    &:hover {
+        fill: #ab8241 !important;
+        cursor: pointer;
+        transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transition: ease-in 0.3s;
+        z-index: 9;
+        transform-origin: 80% 20%;
+    }
+}
+
+.Texas {
+    transform-origin: 40% 50%;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+        fill: #ab8241 !important;
+        cursor: pointer;
+        transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transition: ease-in 0.3s;
+        z-index: 9;
+        transform-origin: 40% 50%;
+    }
+}
+
+
+@keyframes slide-top {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-45px);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateY(-45px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/* Ensure modal is above the SVG */
+.modal {
+    z-index: 10;
+    /* Higher than the SVG z-index */
 }
 
 .ge_pin,
@@ -568,13 +699,7 @@ if (is_array($blockFields)) {
 .ark_pins,
 .Alb_map {
     display: none;
-    /* transition: all 0.6s; */
 }
-
-
-
-
-
 
 
 @keyframes animate-svg {
@@ -925,7 +1050,7 @@ if (is_array($blockFields)) {
 }
 
 .modal {
-    animation-name: animate-in;
+    animation-name: fadeIn;
     animation-duration: 0.5s;
 }
 
@@ -962,9 +1087,9 @@ if (is_array($blockFields)) {
     position: absolute !important;
 }
 
-.modal-header img {
-    /* Styles for .modal-header img go here */
-}
+/* .modal-header img {
+    Styles for .modal-header img go here
+} */
 
 
 .modal .btn-close {
@@ -1025,34 +1150,34 @@ if (is_array($blockFields)) {
 }
 
 
-/* Bs modal */
+/* wsf modal */
 
 .modal {
-    --bs-modal-zindex: 1055;
-    --bs-modal-width: 500px;
-    --bs-modal-padding: 1rem;
-    --bs-modal-margin: 0.5rem;
-    --bs-modal-color: ;
-    --bs-modal-bg: #fff;
-    --bs-modal-border-color: var(--bs-border-color-translucent);
-    --bs-modal-border-width: 1px;
-    --bs-modal-border-radius: 0.5rem;
-    --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    --bs-modal-inner-border-radius: calc(0.5rem - 1px);
-    --bs-modal-header-padding-x: 1rem;
-    --bs-modal-header-padding-y: 1rem;
-    --bs-modal-header-padding: 1rem 1rem;
-    --bs-modal-header-border-color: var(--bs-border-color);
-    --bs-modal-header-border-width: 1px;
-    --bs-modal-title-line-height: 1.5;
-    --bs-modal-footer-gap: 0.5rem;
-    --bs-modal-footer-bg: ;
-    --bs-modal-footer-border-color: var(--bs-border-color);
-    --bs-modal-footer-border-width: 1px;
+    --wsf-modal-zindex: 1055;
+    --wsf-modal-width: 500px;
+    --wsf-modal-padding: 1rem;
+    --wsf-modal-margin: 0.5rem;
+    --wsf-modal-color: ;
+    --wsf-modal-bg: #fff;
+    --wsf-modal-border-color: var(--wsf-border-color-translucent);
+    --wsf-modal-border-width: 1px;
+    --wsf-modal-border-radius: 0.5rem;
+    --wsf-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --wsf-modal-inner-border-radius: calc(0.5rem - 1px);
+    --wsf-modal-header-padding-x: 1rem;
+    --wsf-modal-header-padding-y: 1rem;
+    --wsf-modal-header-padding: 1rem 1rem;
+    --wsf-modal-header-border-color: var(--wsf-border-color);
+    --wsf-modal-header-border-width: 1px;
+    --wsf-modal-title-line-height: 1.5;
+    --wsf-modal-footer-gap: 0.5rem;
+    --wsf-modal-footer-bg: ;
+    --wsf-modal-footer-border-color: var(--wsf-border-color);
+    --wsf-modal-footer-border-width: 1px;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: var(--bs-modal-zindex);
+    z-index: var(--wsf-modal-zindex);
     display: none;
     width: 100%;
     height: 100%;
@@ -1065,7 +1190,7 @@ if (is_array($blockFields)) {
 .modal-dialog-centered {
     display: flex;
     align-items: center;
-    min-height: calc(100% - var(--bs-modal-margin) * 2)
+    min-height: calc(100% - var(--wsf-modal-margin) * 2)
 }
 
 .modal-content {
@@ -1077,16 +1202,16 @@ if (is_array($blockFields)) {
 }
 
 .modal-backdrop {
-    --bs-backdrop-zindex: 1050;
-    --bs-backdrop-bg: #000;
-    --bs-backdrop-opacity: 0;
+    --wsf-backdrop-zindex: 1050;
+    --wsf-backdrop-bg: #000;
+    --wsf-backdrop-opacity: 0;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: var(--bs-backdrop-zindex);
+    z-index: var(--wsf-backdrop-zindex);
     width: 100vw;
     height: 100vh;
-    background-color: var(--bs-backdrop-bg)
+    background-color: var(--wsf-backdrop-bg)
 }
 
 .modal-backdrop.fade {
@@ -1094,7 +1219,7 @@ if (is_array($blockFields)) {
 }
 
 .modal-backdrop.show {
-    opacity: var(--bs-backdrop-opacity)
+    opacity: var(--wsf-backdrop-opacity)
 }
 
 .modal-header {
@@ -1103,53 +1228,42 @@ if (is_array($blockFields)) {
 }
 
 .modal-header .btn-close {
-    margin: calc(-.5 * var(--bs-modal-header-padding-y)) calc(-.5 * var(--bs-modal-header-padding-x)) calc(-.5 * var(--bs-modal-header-padding-y)) auto
+    margin: calc(-.5 * var(--wsf-modal-header-padding-y)) calc(-.5 * var(--wsf-modal-header-padding-x)) calc(-.5 * var(--wsf-modal-header-padding-y)) auto
 }
 
 .modal-title {
     margin-bottom: 0;
-    line-height: var(--bs-modal-title-line-height)
+    line-height: var(--wsf-modal-title-line-height)
 }
 
 .modal-body {
     position: relative;
     flex: 1 1 auto;
-    padding: var(--bs-modal-padding)
+    padding: var(--wsf-modal-padding)
 }
 
 
 
 @media (min-width:576px) {
     .modal {
-        --bs-modal-margin: 1.75rem;
-        --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)
+        --wsf-modal-margin: 1.75rem;
+        --wsf-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)
     }
 
     .modal-dialog {
-        max-width: var(--bs-modal-width);
+        max-width: var(--wsf-modal-width);
         margin-right: auto;
         margin-left: auto
     }
 
     .modal-sm {
-        --bs-modal-width: 300px;
+        --wsf-modal-width: 300px;
     }
 
 }
 
-@media (min-width:992px) {
 
-    .modal-lg,
-    .modal-xl {
-        --bs-modal-width: 800px
-    }
-}
 
-@media (min-width:1200px) {
-    .modal-xl {
-        --bs-modal-width: 1140px
-    }
-}
 
 
 /* MobileMap version */
@@ -1178,7 +1292,7 @@ if (is_array($blockFields)) {
     max-width: 300px;
     width: 100%;
     display: block;
-    padding: 50px 0px 70px 0px;
+    padding: 0px 0px 50px 0px;
 }
 
 .slide-text {

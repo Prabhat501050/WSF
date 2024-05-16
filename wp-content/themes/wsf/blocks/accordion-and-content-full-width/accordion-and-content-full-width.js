@@ -85,13 +85,18 @@ export const AccordionAndContentFullWidth = (() => {
 				var accordionCollapse = accordionItem.querySelector('.accordion-collapse');
 				if (accordionButton && accordionCollapse && !accordionCollapse.classList.contains('hidden')) {
 					toggleAccordion(id);
+
 				}
 			}
 		});
+		window.setTimeout(offsetAnchor, 1);
+		function offsetAnchor() {
+			if (location.hash.length !== 0) {
+				window.scrollTo(window.scrollX, window.scrollY - 215);
+			}
+		}
 	});
 
-
-	// })
 
 	return {
 		init: init,

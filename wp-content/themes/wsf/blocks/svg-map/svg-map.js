@@ -49,19 +49,62 @@ export const SvgMap = (() => {
 		}
 	})
 
-
-
-
 	return {
 		init: init,
 	};
 
 })();
 
+// window.onload = function () {
+// 	var states = ['Alabama', 'Arkansas', 'Mississippi', 'Louisiana', 'Georgia', 'North_Carolina', 'Texas'];
+// 	var svgContainer = document.querySelector('.us_map'); // Assuming .us_map is your SVG container class
+// 	// Set initial transition style for smooth animation
+// 	svgContainer.style.transition = "transform 0.5s ease-in-out";
 
+// 	states.forEach(function (state) {
+// 		var modal = document.getElementById(state + 'modal');
+// 		var btn = document.getElementById(state);
+// 		var span = modal.getElementsByClassName('btn-close')[0];
+
+// 		btn.onclick = function () {
+// 			modal.style.display = "block";
+// 			modal.style.animation = "slide-top 0.5s cubic-bezier(0.42, 0, 0.58, 1) forwards";
+// 			svgContainer.style.transform = "translateX(-30%)"; // Shift SVG to the left
+// 		}
+
+// 		span.onclick = function () {
+// 			closeModal(modal);
+// 		}
+
+// 		modal.onclick = function (event) {
+// 			if (event.target == modal) {
+// 				closeModal(modal);
+// 			}
+// 		}
+// 	});
+
+// 	window.onclick = function (event) {
+// 		states.forEach(function (state) {
+// 			var modal = document.getElementById(state + 'modal');
+// 			if (event.target == modal) {
+// 				closeModal(modal);
+// 			}
+// 		});
+// 	};
+
+// 	function closeModal(modal) {
+// 		modal.style.animation = "slide-out 0.5s cubic-bezier(0.42, 0, 0.58, 1) backwards";
+// 		setTimeout(function () {
+// 			modal.style.display = "none";
+// 			svgContainer.style.transform = ""; // Reset SVG position
+// 		}, 300);
+// 	}
+// }
 
 window.onload = function () {
 	var states = ['Alabama', 'Arkansas', 'Mississippi', 'Louisiana', 'Georgia', 'North_Carolina', 'Texas'];
+	var svgContainer = document.querySelector('.us_map'); // Assuming .us_map is your SVG container class
+	svgContainer.style.transition = "transform 0.5s ease-in-out"; // Smooth transition
 
 	states.forEach(function (state) {
 		var modal = document.getElementById(state + 'modal');
@@ -70,13 +113,16 @@ window.onload = function () {
 
 		btn.onclick = function () {
 			modal.style.display = "block";
+			var modalRect = modal.getBoundingClientRect(); // Get the position of the modal
+			var leftOffset = modalRect.left; // Get the left position of the modal
+			modal.style.animation = "slide-top 0.5s cubic-bezier(0.42, 0, 0.58, 1) forwards";
+			svgContainer.style.transform = "translateX(-" + leftOffset + "px)"; // Shift SVG based on modal position
 		}
 
 		span.onclick = function () {
 			closeModal(modal);
 		}
 
-		// Attach the event listener directly to the modal
 		modal.onclick = function (event) {
 			if (event.target == modal) {
 				closeModal(modal);
@@ -84,7 +130,6 @@ window.onload = function () {
 		}
 	});
 
-	// Close modal if anywhere on the window is clicked, except the modal content
 	window.onclick = function (event) {
 		states.forEach(function (state) {
 			var modal = document.getElementById(state + 'modal');
@@ -95,42 +140,15 @@ window.onload = function () {
 	};
 
 	function closeModal(modal) {
-		modal.style.animationName = "fadeOut";
+		modal.style.animation = "slide-out 0.5s cubic-bezier(0.42, 0, 0.58, 1) backwards";
 		setTimeout(function () {
 			modal.style.display = "none";
-			modal.style.animationName = "";
+			svgContainer.style.transform = ""; // Reset SVG position
 		}, 500);
 	}
-};
+}
 
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-// 	function applyPulseAnimation(circle, delay) {
-// 		const cx = circle.getAttribute('cx');
-// 		const cy = circle.getAttribute('cy');
-// 		circle.style.transformOrigin = `${cx}px ${cy}px`;
-// 		circle.style.animation = `pulse-me 3s linear infinite ${delay}s`;
-// 	}
-
-// 	const styleEl = document.createElement('style');
-// 	document.head.appendChild(styleEl);
-// 	const styleSheet = styleEl.sheet;
-// 	styleSheet.insertRule(`
-//         @keyframes pulse-me {
-//             0% { transform: scale(0.5); opacity: 0; }
-//             50% { opacity: 0.5; }
-//             70% { opacity: 0.07; }
-//             100% { transform: scale(2.5); opacity: 0; }
-//         }`, styleSheet.cssRules.length);
-
-
-// 	const circles = document.querySelectorAll('.Ellipse');
-// 	circles.forEach((circle, index) => {
-// 		applyPulseAnimation(circle, index * 0.5);
-// 	});
-// });
-
+//pin animation
 document.addEventListener('DOMContentLoaded', function () {
 	// Function to apply the pulse animation to a circle
 	function applyPulseAnimation(circle) {
@@ -161,25 +179,53 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-
-
-
-
 // Mobile Map slider 
 
 document.addEventListener('DOMContentLoaded', (event) => {
 	let index = 0;
 	const slides = document.querySelectorAll('.slide');
 	const totalSlides = slides.length;
+	let startX;
+	let currentTranslate = 0;
 
 	function showSlide(n) {
 		const slidesContainer = document.querySelector('.slides');
-		slidesContainer.style.transform = 'translateX(' + (-n * 100) + '%)';
+		currentTranslate = -n * 100;
+		slidesContainer.style.transform = 'translateX(' + currentTranslate + '%)';
 	}
 
 	window.moveSlide = function (n) {
 		index = (index + n + totalSlides) % totalSlides;
 		showSlide(index);
+	}
+
+	// Touch events
+	const slidesContainer = document.querySelector('.slides');
+	slidesContainer.addEventListener('touchstart', handleTouchStart, false);
+	slidesContainer.addEventListener('touchmove', handleTouchMove, false);
+	slidesContainer.addEventListener('touchend', handleTouchEnd, false);
+
+	function handleTouchStart(event) {
+		startX = event.touches[0].clientX;
+	}
+
+	function handleTouchMove(event) {
+		const touchX = event.touches[0].clientX;
+		const deltaX = touchX - startX;
+		const translateAmount = currentTranslate + deltaX;
+		slidesContainer.style.transform = 'translateX(' + translateAmount + 'px)';
+	}
+
+	function handleTouchEnd(event) {
+		const endX = event.changedTouches[0].clientX;
+		const deltaX = endX - startX;
+		if (deltaX < -50) { // Swipe left
+			moveSlide(1);
+		} else if (deltaX > 50) { // Swipe right
+			moveSlide(-1);
+		} else { // Tap or insufficient swipe, revert to original position
+			showSlide(index);
+		}
 	}
 
 	// Function to adjust the visibility of maps based on device width
@@ -197,34 +243,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		}
 	}
 
-	// Automatic sliding with loop back to the first image
-	// setInterval(() => {
-	// 	index = (index + 1) % totalSlides; // Loop back to the first image
-	// 	showSlide(index);
-	// }, 3000); // Change image every 3 seconds
-
 	// Initial display and adjustment
 	adjustMapVisibility();
 
 	// Adjust visibility on resize
 	window.onresize = adjustMapVisibility;
-
-
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

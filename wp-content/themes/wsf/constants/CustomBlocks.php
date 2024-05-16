@@ -1,7 +1,24 @@
 <?php
 
 define('PX_CUSTOM_BLOCKS', [
-	/* PLOP_INJECT_EXPORT */
+
+	array(
+		'name'            => 'accordion-with-img',
+		'title'           => __('AccordionWithImg'),
+		'description'     => __('AccordionWithImg block (custom).'),
+		'render_template' => get_template_directory() . '/blocks/accordion-with-img/accordion-with-img.php',
+		'category'        => 'custom-blocks',
+		'icon'            => 'format-image',
+		'keywords'        => array('saccordion-with-img', 'display'),
+		'supports'        => array('align' => false),
+		'example'         => array(
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
+	),
+
 	array(
 		'name'            => 'svg-map',
 		'title'           => __('SvgMap'),
@@ -12,13 +29,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('svg-map', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-				
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -31,13 +46,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('accordion-and-content-full-width', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-				
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -50,13 +63,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('events', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-				
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -69,8 +80,8 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('accordion-and-content', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
+			'attributes' => array(
+				'mode' => 'preview',
 				'data' => array(
 					'content' => '<h2>Hello world</h2>',
 					'items' => array(
@@ -88,8 +99,8 @@ define('PX_CUSTOM_BLOCKS', [
 						)
 					)
 				)
-	        ),
-	    ),
+			),
+		),
 	),
 
 	[
@@ -104,61 +115,61 @@ define('PX_CUSTOM_BLOCKS', [
 			'align' => false
 		],
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
+			'attributes' => array(
+				'mode' => 'preview',
 				'data' => array(
 					'content' => '<h1 class="h-display" style="text-align: center;"><span class="text-bronze">Working together</span><br>To improve the lives of the communities we serve</h1>',
-				    'media_type' => 'image',
-				    'layout' => 'media-background',
-				    'image' => array(
-			            'ID' => 79,
-			            'id' => 79,
-			            'title' => 'Homepage-Hero-Display-Desktop',
-			            'filename' => 'Homepage-Hero-Display-Desktop.jpg',
-			            'filesize' => 396738,
-			            'url' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop.jpg',
-			            'link' => '/home/homepage-hero-display-desktop/',
-			            'alt' => '',
-			            'author' => 1,
-			            'description' => '',
-			            'name' => 'homepage-hero-display-desktop',
-			            'status' => 'inherit',
-			            'uploaded_to' => 4,
-			            'date' => '2023-07-17 15:46:04',
-			            'modified' => '2023-07-17 15:46:04',
-			            'menu_order' => 0,
-			            'mime_type' => 'image/jpeg',
-			            'type' => 'image',
-			            'subtype' => 'jpeg',
-			            'icon' => '/wp-includes/images/media/default.png',
-			            'width' => 1680,
-			            'height' => 978,
-			            'sizes' => array(
-			                    'thumbnail' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-150x150.jpg',
-			                    'thumbnail-width' => 150,
-			                    'thumbnail-height' => 150,
-			                    'medium' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-300x175.jpg',
-			                    'medium-width' => 300,
-			                    'medium-height' => 175,
-			                    'medium_large' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-768x447.jpg',
-			                    'medium_large-width' => 768,
-			                    'medium_large-height' => 447,
-			                    'large' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-1024x596.jpg',
-			                    'large-width' => 1024,
-			                    'large-height' => 596,
-			                    '1536x1536' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-1536x894.jpg',
-			                    '1536x1536-width' => 1536,
-			                    '1536x1536-height' => 894,
-			                    '2048x2048' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop.jpg',
-			                    '2048x2048-width' => 1680,
-			                    '2048x2048-height' => 978
-			                ),
+					'media_type' => 'image',
+					'layout' => 'media-background',
+					'image' => array(
+						'ID' => 79,
+						'id' => 79,
+						'title' => 'Homepage-Hero-Display-Desktop',
+						'filename' => 'Homepage-Hero-Display-Desktop.jpg',
+						'filesize' => 396738,
+						'url' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop.jpg',
+						'link' => '/home/homepage-hero-display-desktop/',
+						'alt' => '',
+						'author' => 1,
+						'description' => '',
+						'name' => 'homepage-hero-display-desktop',
+						'status' => 'inherit',
+						'uploaded_to' => 4,
+						'date' => '2023-07-17 15:46:04',
+						'modified' => '2023-07-17 15:46:04',
+						'menu_order' => 0,
+						'mime_type' => 'image/jpeg',
+						'type' => 'image',
+						'subtype' => 'jpeg',
+						'icon' => '/wp-includes/images/media/default.png',
+						'width' => 1680,
+						'height' => 978,
+						'sizes' => array(
+							'thumbnail' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-150x150.jpg',
+							'thumbnail-width' => 150,
+							'thumbnail-height' => 150,
+							'medium' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-300x175.jpg',
+							'medium-width' => 300,
+							'medium-height' => 175,
+							'medium_large' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-768x447.jpg',
+							'medium_large-width' => 768,
+							'medium_large-height' => 447,
+							'large' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-1024x596.jpg',
+							'large-width' => 1024,
+							'large-height' => 596,
+							'1536x1536' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-1536x894.jpg',
+							'1536x1536-width' => 1536,
+							'1536x1536-height' => 894,
+							'2048x2048' => '/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop.jpg',
+							'2048x2048-width' => 1680,
+							'2048x2048-height' => 978
+						),
 
-			           'html' => '<img width="1680" height="978" src="/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop.jpg" class="attachment-original size-original" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop.jpg 1680w, /wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-300x175.jpg 300w, /wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-1024x596.jpg 1024w, /wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-768x447.jpg 768w, /wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-1536x894.jpg 1536w" sizes="(max-width: 1680px) 100vw, 1680px" />'
-        			)
+						'html' => '<img width="1680" height="978" src="/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop.jpg" class="attachment-original size-original" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop.jpg 1680w, /wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-300x175.jpg 300w, /wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-1024x596.jpg 1024w, /wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-768x447.jpg 768w, /wp-content/uploads/2023/07/Homepage-Hero-Display-Desktop-1536x894.jpg 1536w" sizes="(max-width: 1680px) 100vw, 1680px" />'
+					)
 				)
-	        ),
-	    ),
+			),
+		),
 	],
 
 	array(
@@ -171,13 +182,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('brand-slider', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -190,13 +199,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('cards', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -209,13 +216,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('carousel', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -228,13 +233,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('cta', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -247,13 +250,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('columns', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -266,13 +267,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('feature-and-content', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -285,15 +284,13 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('form', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
-	
+
 	array(
 		'name'            => 'hiring-events',
 		'title'           => __('Hiring Events'),
@@ -304,14 +301,12 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('hiring-events', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-				
-				)
-	        ),
-	    ),
-	),	
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
+	),
 
 	array(
 		'name'            => 'locations',
@@ -323,13 +318,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('locations', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -342,13 +335,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('media', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -361,13 +352,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('news', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -380,13 +369,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('stat', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	array(
@@ -399,13 +386,11 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('team', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 
 	[
@@ -420,13 +405,11 @@ define('PX_CUSTOM_BLOCKS', [
 			'align' => false
 		],
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	],
 
 	array(
@@ -439,15 +422,13 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('quote', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
-	
+
 	array(
 		'name'            => 'wrapped-headline',
 		'title'           => __('Wrapped Headline'),
@@ -458,12 +439,10 @@ define('PX_CUSTOM_BLOCKS', [
 		'keywords'        => array('wrapped-headline', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
-	        'attributes' => array(
-	            'mode' => 'preview',
-				'data' => array(
-
-				)
-	        ),
-	    ),
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array()
+			),
+		),
 	),
 ]);

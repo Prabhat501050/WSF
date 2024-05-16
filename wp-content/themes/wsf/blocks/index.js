@@ -1,7 +1,7 @@
 /* PLOP_INJECT_EXPORT */
+export { AccordionWithImg } from './accordion-with-img/accordion-with-img';
 export { SvgMap } from './svg-map/svg-map';
 export { AccordionAndContentFullWidth } from './accordion-and-content-full-width/accordion-and-content-full-width';
-// export { AccordianAndContentFullWidth } from './accordian-and-content-full-width/accordian-and-content-full-width';
 export { Events } from './events/events';
 export { HiringEvents } from './hiring-events/hiring-events';
 export { Quote } from './quote/quote';
