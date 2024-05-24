@@ -3,13 +3,13 @@
 define('PX_CUSTOM_BLOCKS', [
 
 	array(
-		'name'            => 'accordion-with-img',
-		'title'           => __('AccordionWithImg'),
-		'description'     => __('AccordionWithImg block (custom).'),
-		'render_template' => get_template_directory() . '/blocks/accordion-with-img/accordion-with-img.php',
+		'name'            => 'careers-location-accordion',
+		'title'           => __('Careers Location Accordion'),
+		'description'     => __('careers-location-accordion'),
+		'render_template' => get_template_directory() . '/blocks/careers-location-accordion/careers-location-accordion.php',
 		'category'        => 'custom-blocks',
 		'icon'            => 'format-image',
-		'keywords'        => array('saccordion-with-img', 'display'),
+		'keywords'        => array('careers-location-accordion', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
 			'attributes' => array(
@@ -19,14 +19,15 @@ define('PX_CUSTOM_BLOCKS', [
 		),
 	),
 
+
 	array(
-		'name'            => 'svg-map',
-		'title'           => __('SvgMap'),
-		'description'     => __('svg-map block (custom).'),
-		'render_template' => get_template_directory() . '/blocks/svg-map/svg-map.php',
+		'name'            => 'careers-location-map',
+		'title'           => __('Careers Location Map'),
+		'description'     => __('careers-location-map'),
+		'render_template' => get_template_directory() . '/blocks/careers-location-map/careers-location-map.php',
 		'category'        => 'custom-blocks',
 		'icon'            => 'format-image',
-		'keywords'        => array('svg-map', 'display'),
+		'keywords'        => array('careers-location-map', 'display'),
 		'supports'        => array('align' => false),
 		'example'         => array(
 			'attributes' => array(
@@ -36,22 +37,7 @@ define('PX_CUSTOM_BLOCKS', [
 		),
 	),
 
-	array(
-		'name'            => 'accordion-and-content-full-width',
-		'title'           => __('AccordionAndContentFullWidth'),
-		'description'     => __('accordion-and-content-full-width block (custom).'),
-		'render_template' => get_template_directory() . '/blocks/accordion-and-content-full-width/accordion-and-content-full-width.php',
-		'category'        => 'custom-blocks',
-		'icon'            => 'format-image',
-		'keywords'        => array('accordion-and-content-full-width', 'display'),
-		'supports'        => array('align' => false),
-		'example'         => array(
-			'attributes' => array(
-				'mode' => 'preview',
-				'data' => array()
-			),
-		),
-	),
+
 
 	array(
 		'name'            => 'events',
